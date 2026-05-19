@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/screen_bg">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            app:tint="@color/text_dark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pharmacy Home"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+        <ImageButton
+            android:id="@+id/btnCart"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_pharmacy"
+            android:contentDescription="Cart"
+            app:tint="@color/primary_blue"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Search Bar -->
+            <AutoCompleteTextView
+                android:id="@+id/searchMedicine"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Search medicines 🔍"
+                android:background="@drawable/bg_search_oval"
+                android:paddingStart="20dp"
+                android:paddingEnd="20dp"
+                android:textSize="14sp"
+                android:completionThreshold="1"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- 4 Categories -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="4"
+                android:layout_marginBottom="16dp">
+
+                <!-- Prescription -->
+                <LinearLayout
+                    android:id="@+id/catPrescription"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#E3F2FD"
+                        app:cardElevation="2dp">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_report"
+                            android:contentDescription="Prescription"
+                            app:tint="@color/primary_blue"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="prescription"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- OTC -->
+                <LinearLayout
+                    android:id="@+id/catOTC"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#E8F5E9"
+                        app:cardElevation="2dp">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_pharmacy"
+                            android:contentDescription="OTC"
+                            app:tint="#FF6D00"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OTC"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Vitamins -->
+                <LinearLayout
+                    android:id="@+id/catVitamins"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#FFF8E1"
+                        app:cardElevation="2dp">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_ambulance"
+                            android:contentDescription="Vitamins"
+                            app:tint="#FFB300"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="vitamins"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Personal Care -->
+                <LinearLayout
+                    android:id="@+id/catPersonalCare"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="52dp"
+                        android:layout_height="52dp"
+                        app:cardCornerRadius="12dp"
+                        app:cardBackgroundColor="#FCE4EC"
+                        app:cardElevation="2dp">
+                        <ImageView
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_profile"
+                            android:contentDescription="Personal Care"
+                            app:tint="#E91E63"/>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="personal care"
+                        android:textSize="10sp"
+                        android:textColor="@color/text_dark"
+                        android:layout_marginTop="4dp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Feature Products -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feature Products"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:layout_marginBottom="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:layout_marginBottom="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/feature_banner1"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Feature Banner 1"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="2dp">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/feature_banner2"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="Feature Banner 2"/>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <!-- Best Sellers -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Best Sellers"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Panadol -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardPanadol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/panadol"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Panadol"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Panadol Extra"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_dark"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="VitsDent"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tab 25 38 Drops"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_grey"/>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btnBuyPanadol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="BUY"
+                        android:textSize="11sp"
+                        android:backgroundTint="@color/primary_blue"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Zyrtec -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardZyrtec"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:src="@drawable/zyrtec"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Zyrtec"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Zyrtec Tablets"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/text_dark"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Synteet"
+                            android:textSize="12sp"
+                            android:textColor="@color/text_grey"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Vitamin 2.0: 1 Drops"
+                            android:textSize="11sp"
+                            android:textColor="@color/text_grey"/>
+                    </LinearLayout>
+                    <Button
+                        android:id="@+id/btnBuyZyrtec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="32dp"
+                        android:text="BUY"
+                        android:textSize="11sp"
+                        android:backgroundTint="@color/primary_blue"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:weightSum="4"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home"
+                app:tint="@color/primary_blue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textColor="@color/primary_blue"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navNotification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notification"
+                android:contentDescription="Notification"
+                app:tint="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textSize="10sp"
+                android:textColor="@color/text_grey"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="Profile"
+                app:tint="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="10sp"
+                android:textColor="@color/text_grey"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/navReport"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_report"
+                android:contentDescription="Report"
+                app:tint="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:textSize="10sp"
+                android:textColor="@color/text_grey"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

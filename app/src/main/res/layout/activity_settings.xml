@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/screen_bg">
+
+    <!-- Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="24dp"
+        android:background="@color/screen_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings ⚙"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_dark"/>
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_medicare_logo"
+            android:layout_marginTop="8dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Skip the queue, Book your care in a tap"
+            android:textSize="13sp"
+            android:textColor="@color/text_grey"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+    <!-- Account Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Account Security"
+            android:textSize="14sp"
+            android:textColor="@color/primary_blue"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Permission"
+            android:textSize="14sp"
+            android:textColor="@color/primary_blue"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_profile"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Privacy"
+            android:textSize="14sp"
+            android:textColor="@color/primary_blue"
+            android:layout_marginStart="8dp"/>
+
+    </LinearLayout>
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/text_grey"
+        android:layout_marginVertical="8dp"/>
+
+    <!-- Settings Items -->
+    <TextView
+        android:id="@+id/menuPayment"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Your payment method"
+        android:textSize="15sp"
+        android:textColor="@color/text_dark"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/menuAbout"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="About this app"
+        android:textSize="15sp"
+        android:textColor="@color/text_dark"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/menuNotification"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Notification"
+        android:textSize="15sp"
+        android:textColor="@color/text_dark"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="2dp"/>
+
+    <RelativeLayout
+        android:id="@+id/menuLanguage"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:layout_marginBottom="2dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Language"
+            android:textSize="15sp"
+            android:textColor="@color/text_dark"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="uk English"
+            android:textSize="13sp"
+            android:textColor="@color/text_grey"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/menuShare"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Share this app"
+        android:textSize="15sp"
+        android:textColor="@color/text_dark"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/menuSignOut"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Sign out"
+        android:textSize="15sp"
+        android:textColor="@color/text_dark"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="2dp"/>
+
+    <TextView
+        android:id="@+id/menuLegal"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Legal terms &amp; Policies"
+        android:textSize="15sp"
+        android:textColor="@color/text_dark"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="2dp"/>
+
+    <!-- Back Button -->
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:text="BACK"
+        android:textAllCaps="true"
+        android:backgroundTint="@color/screen_bg"
+        android:textColor="@color/text_dark"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 3 of 3"
+            android:textColor="#1565C0"
+            android:textSize="13sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lifestyle"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#0D1B2A"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your daily habits"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Activity Level -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Activity Level"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <Spinner
+            android:id="@+id/spinnerActivity"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:entries="@array/activity_options"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Smoking -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Smoking"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <Spinner
+            android:id="@+id/spinnerSmoking"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:entries="@array/smoking_options"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Alcohol -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Alcohol"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <Spinner
+            android:id="@+id/spinnerAlcohol"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:entries="@array/alcohol_options"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Diet -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diet (optional)"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etDiet"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/input_bg"
+            android:hint="e.g. Vegetarian, Low carb"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="← Back"
+                android:textColor="#1565C0"
+                android:backgroundTint="#E8F0FE"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnFinish"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Finish ✓"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1565C0"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

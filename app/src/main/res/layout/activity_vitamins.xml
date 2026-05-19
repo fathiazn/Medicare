@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/white"
+        android:padding="12dp"
+        android:elevation="4dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            app:tint="@color/text_dark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vitamins &amp; Supplements"
+            android:textColor="@color/text_dark"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Vitamin C -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/vitamin_c"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Vitamin C" android:layout_marginStart="12dp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnAddVitaminC" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:backgroundTint="#4CAF50"/>
+            </LinearLayout>
+
+            <!-- Omega 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/omega3"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Omega 3" android:layout_marginStart="12dp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnAddOmega3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:backgroundTint="#4CAF50"/>
+            </LinearLayout>
+
+            <!-- Calcium -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/zyrtec"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Calcium" android:layout_marginStart="12dp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnAddCalcium" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:backgroundTint="#4CAF50"/>
+            </LinearLayout>
+
+            <!-- Multivitamin -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/multivitamin"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Multivitamin" android:layout_marginStart="12dp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnAddMultivitamin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:backgroundTint="#4CAF50"/>
+            </LinearLayout>
+
+            <!-- Zinc -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:gravity="center_vertical">
+                <ImageView android:layout_width="60dp" android:layout_height="60dp" android:src="@drawable/zinc"/>
+                <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1" android:text="Zinc" android:layout_marginStart="12dp" android:textStyle="bold"/>
+                <Button android:id="@+id/btnAddZinc" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Add" android:backgroundTint="#4CAF50"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <!-- Home -->
+        <LinearLayout
+            android:id="@+id/navHome"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                app:tint="#2196F3"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textColor="#2196F3"/>
+        </LinearLayout>
+
+        <!-- Notification -->
+        <LinearLayout
+            android:id="@+id/navNotification"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notification"
+                app:tint="#888888"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textSize="10sp"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+        <!-- Profile -->
+        <LinearLayout
+            android:id="@+id/navProfile"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                app:tint="#888888"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="10sp"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+        <!-- Report -->
+        <LinearLayout
+            android:id="@+id/navReport"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_report"
+                app:tint="#888888"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:textSize="10sp"
+                android:textColor="#888888"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/screen_bg">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/splash_bg"
+        android:padding="12dp">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/ic_arrow_back"
+            android:contentDescription="Back"
+            app:tint="@color/text_dark"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"/>
+
+    </RelativeLayout>
+
+    <!-- Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Appointment Confirmation"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:layout_gravity="center"
+                android:layout_marginBottom="4dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enter patient Details"
+                android:textSize="13sp"
+                android:textColor="@color/text_grey"
+                android:layout_gravity="center"
+                android:layout_marginBottom="24dp"/>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Name -"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etAge"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Age -"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:inputType="number"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etPhone"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Phone Number -"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:inputType="phone"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etDoctorName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Doctor Name -"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="12dp"/>
+
+            <EditText
+                android:id="@+id/etGender"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:hint="Gender -"
+                android:background="@color/white"
+                android:padding="12dp"
+                android:textSize="14sp"
+                android:layout_marginBottom="32dp"/>
+
+            <Button
+                android:id="@+id/btnConfirm"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Confirm booking"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:backgroundTint="#7DC9A0"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/btnCancel"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="Cancel Booking"
+                android:textAllCaps="false"
+                android:textColor="@color/text_dark"
+                android:backgroundTint="@color/white"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_home"
+                android:contentDescription="Home"
+                app:tint="@color/primary_blue"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Home"
+                android:textSize="10sp"
+                android:textColor="@color/primary_blue"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_notification"
+                android:contentDescription="Notification"
+                app:tint="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Notification"
+                android:textSize="10sp"
+                android:textColor="@color/text_grey"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_profile"
+                android:contentDescription="Profile"
+                app:tint="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:textSize="10sp"
+                android:textColor="@color/text_grey"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_report"
+                android:contentDescription="Report"
+                app:tint="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report"
+                android:textSize="10sp"
+                android:textColor="@color/text_grey"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

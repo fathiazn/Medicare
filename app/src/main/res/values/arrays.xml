@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Other</item>
+        <item>Prefer not to say</item>
+    </string-array>
+
+    <string-array name="blood_group_options">
+        <item>Select Blood Group</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+        <item>O+</item>
+        <item>O-</item>
+    </string-array>
+
+    <string-array name="activity_options">
+        <item>Select Activity Level</item>
+        <item>Sedentary (little or no exercise)</item>
+        <item>Lightly Active (1-3 days/week)</item>
+        <item>Moderately Active (3-5 days/week)</item>
+        <item>Very Active (6-7 days/week)</item>
+    </string-array>
+
+    <string-array name="smoking_options">
+        <item>Select</item>
+        <item>Non-Smoker</item>
+        <item>Occasional Smoker</item>
+        <item>Regular Smoker</item>
+        <item>Ex-Smoker</item>
+    </string-array>
+
+    <string-array name="alcohol_options">
+        <item>Select</item>
+        <item>Non-Drinker</item>
+        <item>Occasional Drinker</item>
+        <item>Regular Drinker</item>
+    </string-array>
+
+</resources>

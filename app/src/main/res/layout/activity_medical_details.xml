@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F8FF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Step 2 of 3"
+            android:textColor="#1565C0"
+            android:textSize="13sp"
+            android:layout_marginBottom="4dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Medical Details"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#0D1B2A"
+            android:layout_marginBottom="6dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your health information"
+            android:textSize="14sp"
+            android:textColor="#6B7280"
+            android:layout_marginBottom="28dp"/>
+
+        <!-- Blood Group -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Group"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <Spinner
+            android:id="@+id/spinnerBloodGroup"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:paddingStart="16dp"
+            android:entries="@array/blood_group_options"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Blood Pressure -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blood Pressure (mmHg)"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etBloodPressure"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:hint="e.g. 120/80"
+            android:paddingStart="16dp"
+            android:inputType="text"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Heart Rate -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Heart Rate (bpm)"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etHeartRate"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:background="@drawable/input_bg"
+            android:hint="e.g. 72"
+            android:paddingStart="16dp"
+            android:inputType="number"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Known Conditions -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Known Conditions (optional)"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etConditions"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/input_bg"
+            android:hint="e.g. Diabetes, Hypertension"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Allergies -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Allergies (optional)"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etAllergies"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/input_bg"
+            android:hint="e.g. Penicillin, Peanuts"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Medications -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Current Medications (optional)"
+            android:textColor="#374151"
+            android:textSize="13sp"
+            android:layout_marginBottom="6dp"/>
+        <EditText
+            android:id="@+id/etMedications"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="@drawable/input_bg"
+            android:hint="e.g. Metformin 500mg"
+            android:paddingStart="16dp"
+            android:paddingTop="12dp"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnBack"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="← Back"
+                android:textColor="#1565C0"
+                android:backgroundTint="#E8F0FE"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/btnNext"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Next →"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#1565C0"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
