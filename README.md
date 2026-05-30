@@ -1,12 +1,7 @@
-🏥 Medicare
+Medicare
 A modern Android healthcare application built with Kotlin, designed to streamline patient management, doctor appointments, pharmacy, and medical records.
 
-📱 Screenshots
-
-Coming soon
-
-
-✨ Features
+Features
 
 🔐 User Authentication — Login, Register, Splash & Welcome screens
 🏠 Home Dashboard — Overview and quick access to all modules
@@ -23,8 +18,39 @@ Coming soon
 🛠️ Tech Stack
 LayerTechnologyLanguageKotlinPlatformAndroidBuild SystemGradle (KTS)ArchitectureMVVMMin SDK24+BackendComing soon
 
-👥 Team Members & Contributions
+👥 Team Members 
 MemberRoleModules MRF.ASNA- Project Lead & Full StackHome, Appointment, Ambulance, Cart, Checkout, Payment, Medical Details, Lifestyle, Vitamins, Order Tracking, Pharmacy, Doctor Detail, Top Doctors, Product Detail, Help & more + NN.ASRA-UI DeveloperLogin, Register, Splash, Welcome & Project Report + MASH.BANU- UI DeveloperProfile, Edit Profile, Profile Created, Settings
 
-📋 Module Breakdown
-ModuleActivityDeveloper🔐 Splash ScreenSplashActivity-NN.ASRA🌟 WelcomeWelcomeActivity-NN.ASRA🔑 LoginLoginActivity-NN.ASRA📝 RegisterRegisterActivity-NN.ASRA👤 ProfileProfileActivity-MASH.BANU✏️ Edit ProfileEditProfileActivity-MASH.BANU✅ Profile CreatedProfileCreatedActivity-MASH.BANU⚙️ SettingsSettingsActivity-MASH.BANU🏠 HomeHomeActivity-MRF.ASNA👨‍⚕️ Top DoctorsTopDoctorsActivity-MRF.ASNA🩺 Doctor DetailDoctorDetailActivity-MRF.ASNA💊 PharmacyPharmacyActivity-MRF.ASNA📦 Product DetailProductDetailActivity-MRF.ASNA📅 AppointmentAppointmentActivity-MRF.ASNA🚑 AmbulanceAmbulanceActivity-MRF.ASNA🛒 CartCartActivity-MRF.ASNA💳 CheckoutCheckoutActivity-MRF.ASNA✅ Booking ConfirmationBookingConfirmationActivity-MRF.ASNA💰 PaymentPaymentActivity-MRF.ASNA🎉 Payment SuccessPaymentSuccessActivityMRF.ASNA📦 Order TrackingOrderTrackingActivityMRF.ASNA🧬 Medical DetailsMedicalDetailsActivityMRF.ASNA🥗 LifestyleLifestyleActivityMRF.ASNA💊 VitaminsVitaminsActivityMRF.ASNA🧾 Basic DetailsBasicDetailsActivityMRF.ASNA❓ HelpHelpActivityMRF.ASNA
+Contribution
+
+Member 01 - NN. Asra
+ModuleActivityDeveloper🔐 Splash ScreenSplashActivity
+🌟 WelcomeWelcomeActivity
+🔑 LoginLoginActivity
+📝 RegisterRegisterActivity
+
+Member 02 - MASH. Banu
+👤 ProfileProfileActivity
+Edit ProfileEditProfileActivity
+✅ Profile CreatedProfileCreatedActivity
+⚙️ SettingsSettingsActivity
+
+Member 03 - MRF. Asna
+🏠 HomeHomeActivity
+👨‍⚕️ Top DoctorsTopDoctorsActivity
+🩺 Doctor DetailDoctorDetailActivity
+💊 PharmacyPharmacyActivity
+📦 Product DetailProductDetailActivity
+📅 AppointmentAppointmentActivity
+🚑 AmbulanceAmbulanceActivity
+🛒 CartCartActivity
+💳 CheckoutCheckoutActivity
+✅ Booking ConfirmationBookingConfirmationActivity
+💰 PaymentPaymentActivity
+🎉 Payment SuccessPaymentSuccessActivity
+📦 Order TrackingOrderTrackingActivity
+🧬 Medical DetailsMedicalDetailsActivity
+🥗 LifestyleLifestyleActivity
+💊 VitaminsVitaminsActivity
+🧾 Basic DetailsBasicDetailsActivity
+❓ HelpHelpActivity
