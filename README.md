@@ -33,7 +33,7 @@ Member 02 - MASH. Banu
 👤 ProfileProfileActivity
 Edit ProfileEditProfileActivity
 ✅ Profile CreatedProfileCreatedActivity
-⚙️ SettingsSettingsActivity
+⚙️ SettingsSettingsActivity.
 
 Member 03 - MRF. Asna
 🏠 HomeHomeActivity
